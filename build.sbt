@@ -4,7 +4,11 @@ version := "1.0"
 
 scalaVersion := "2.11.4"
 
-libraryDependencies +=
-  "com.typesafe.akka" %% "akka-actor" % "2.3.6"
+resolvers += "Sonatype OSS Snapshots" at
+  "https://oss.sonatype.org/content/repositories/releases"
 
-resolvers += "Akka Snapshots" at "http://repo.akka.io/snapshots/"
+libraryDependencies += "com.storm-enroute" %% "scalameter" % "0.7"
+
+testFrameworks += new TestFramework("org.scalameter.ScalaMeterFramework")
+
+parallelExecution in Test := false

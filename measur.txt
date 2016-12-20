@@ -1,0 +1,27 @@
+Measuring of Blur (radius = 2):
+
+For 1 threads: 
+Vertical: 1386.68566 ms
+Horizontal :1310.42649 ms
+
+
+For 2 threads: 
+Vertical: 763.184813 ms
+Horizontal :827.471707 ms
+
+
+For 4 threads: 
+Vertical: 721.081075 ms
+Horizontal :677.630313 ms
+
+
+For 8 threads: 
+Vertical: 644.605955 ms
+Horizontal :654.638941 ms
+
+
+For 16 threads: 
+Vertical: 635.715159 ms
+Horizontal :672.331158 ms
+
+
