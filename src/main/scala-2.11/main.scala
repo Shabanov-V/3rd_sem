@@ -29,6 +29,7 @@ object Main {
   def main(args: Array[String]): Unit = {
     val r = 2 // Blur radius
     val NumOfThreads = 10
+    //org.scalatest.run(new Unit_test)
     //measur()
   }
   def using[A <: {def close(): Unit}, B](param: A)(f: A => B): B =

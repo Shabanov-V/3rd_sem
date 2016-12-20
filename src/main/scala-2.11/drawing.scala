@@ -9,11 +9,16 @@ import javax.imageio.ImageIO
 
 
 object drawing {
+
+  def getRed(x : Int)   : Int = (x & 0xff0000) / 65536
+  def getGreen(x : Int) : Int = (x & 0xff00)   / 256
+  def getBlue(x : Int)  : Int = (x & 0xff)
+
   def pixel_color(img: BufferedImage, x : Int, y : Int, r : Int) : Int = {
     var tmp       = 1
-    var cur_red   = (img.getRGB(x, y) & 0xff0000) / 65536
-    var cur_green = (img.getRGB(x, y) & 0xff00) / 256
-    var cur_blue  = (img.getRGB(x, y) & 0xff)
+    var cur_red   = getRed(img.getRGB(x, y))
+    var cur_green = getGreen(img.getRGB(x, y))
+    var cur_blue  = getBlue(img.getRGB(x, y))
     var w = img.getWidth
     var h = img.getHeight
     for (t1 <- math.max((x - r), 0) until math.min((x + r), w))
